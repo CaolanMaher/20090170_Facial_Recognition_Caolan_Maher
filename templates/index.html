@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+              background-color: rgb(0, 0, 0);
+            }
+            h1 {
+                color: white;
+            }
+            p {
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Caolan Maher Facial Recognition Project</h1>
+        <div>
+            <img src="{{ url_for('video') }}" width="50%" />
+        </div>
+        <p>Resolution</p>
+        <form method="post">
+            <select name="example">
+                <option value="1920 1080">100%</option>
+                <option value="960 540">50%</option>
+                <option value="480 270">25%</option>
+                <option value="500 500">500 x 500 (Demo)</option>
+            </select>
+            <button type="submit">Save</button>
+        </form>
+    </body>
+</html>

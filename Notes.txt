@@ -1,0 +1,48 @@
+installed python 3.8
+installed flask
+
+upgraded pip from 19.2.3 to 22.3.1
+
+installed opencv-python
+installed c++ tools for visual studio
+installed cmake
+installed Flask_SocketIO
+installed eventlet
+installed waitress
+
+dlib gives errors
+socketio gives errors
+
+--------------------------------------------
+
+installed Python 3.8
+
+installed opencv-python
+
+installed opencv-contrib-python for recogniser
+
+got base script to show webcam
+
+made new folder cascades
+
+copied data folder from cv2 and out into cascades folder
+
+made a folder (training_images) for training images
+
+give each person their own folder with their name
+
+put pictures of myself to test the training
+
+made a new script called training.py
+
+script gets all images from the training_images folder,
+for each persons folder, an id will be assigned to that person,
+then it will go through each image in that folder,
+convert them to greyscale, make an array of the grey value (0-255),
+do face detection on the image, get the region of interest,
+add it to a list for training, and add the id to the labels list
+
+then, using pickle, we output the labels dictionary to a file
+to be read in by the app
+
+then, train the recogniser with the training list and the list of labels
