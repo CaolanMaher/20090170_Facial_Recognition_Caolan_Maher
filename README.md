@@ -1,3 +1,5 @@
+Training images of myself were removed for privacy
+
 # Installation
 
 To use this program:
