@@ -2,6 +2,7 @@ import cv2
 import pickle
 from flask import Flask, render_template, Response, request
 from threading import Thread
+from waitress import serve
 
 # initialise our app
 app = Flask(__name__)
@@ -226,4 +227,5 @@ def video():
     return Response(generate_frames(), mimetype='multipart/x-mixed-replace; boundary=frame')
 
 if __name__ == '__main__':
-    app.run()
+    #app.run()
+    serve(app, host='0.0.0.0', port=5000, threads=3)
